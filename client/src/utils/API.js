@@ -18,8 +18,8 @@ export default {
   saveBook: function(bookData) {
     return axios.post("/api/books", bookData);
   },
-  searchBooks: function(bookData){
-    return axios.get("https://www.googleapis.com/books/v1/volumes?q="+bookData+"&key="+process.env.REACT_APP_BOOKAPI);
-    //AIzaSyCTlH_ymz_kEAn7dvhs5U1dwJJkXaigqaw
+  searchBooks: function(id){
+    // return axios.get("https://www.googleapis.com/books/v1/volumes?q="+bookData+"&key="+process.env.REACT_APP_BOOKAPI);
+    return axios.get("/api/books/search/" + id);
   }
 };

@@ -1,4 +1,6 @@
 const db = require("../models");
+import axios from "axios";
+require('dotenv').config();
 
 // Defining methods for the booksController
 module.exports = {
@@ -33,5 +35,9 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  searchBook: function(req,res){
+    axios.get("https://www.googleapis.com/books/v1/volumes?q="+req.params.id+"&key="+process.env.REACT_APP_BOOKAPI)
+    .then(dbModel => res.json(dbModel))
   }
 };
