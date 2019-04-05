@@ -19,7 +19,7 @@ export default {
     return axios.post("/api/books", bookData);
   },
   searchBooks: function(id){
-    // return axios.get("https://www.googleapis.com/books/v1/volumes?q="+bookData+"&key="+process.env.REACT_APP_BOOKAPI);
-    return axios.get("/api/books/search/" + id);
+    return axios.get("https://www.googleapis.com/books/v1/volumes?q="+bookData+"&key=AIzaSyCTlH_ymz_kEAn7dvhs5U1dwJJkXaigqaw");
+    // return axios.get("/api/books/search/" + id);
   }
 };

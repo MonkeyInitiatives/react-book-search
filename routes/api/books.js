@@ -13,6 +13,6 @@ router
   .put(booksController.update)
   .delete(booksController.remove);
 
-router.route("/search/:id").get(booksController.searchBook);
+// router.route("/search/:id").get(booksController.searchBook);
 
 module.exports = router;
