@@ -5,9 +5,9 @@ import "./style.css";
 // That way we don't have to define them all individually
 function AddBtn(props) {
   return (
-    <button className="btn btn-success add-btn" {...props} role="button" tabIndex="0" href="/books">
+    <a className="btn btn-success add-btn" {...props} role="button" tabIndex="0" href="/books">
       Save
-    </button>
+    </a>
   );
 }
 
