@@ -64,7 +64,6 @@ class Books extends Component {
     return (
       <Container fluid>
         <Row>
-          
           <Col size="md sm-12">
             <Jumbotron>
               <h1>React Google Books Search</h1>

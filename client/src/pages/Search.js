@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import SearchForm from "../components/SearchForm";
 import SearchResults from "../components/SearchResults";
-
+import Jumbotron from "../components/Jumbotron";
+import { Col, Row, Container } from "../components/Grid";
 
 class Search extends Component {
   state = {
@@ -36,9 +37,12 @@ class Search extends Component {
   };
   render() {
     return (
-      <div>
-        
-          <h1 className="text-center">Search Books!</h1>
+      <Container fluid>
+      <Row>
+        <Col size="md sm-12">
+          <Jumbotron>
+              <h1>Search Books!</h1>
+          </Jumbotron>
           
           <SearchForm
             handleFormSubmit={this.handleFormSubmit}
@@ -47,7 +51,9 @@ class Search extends Component {
           />
           <SearchResults results={this.state.results} />
         
-      </div>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
